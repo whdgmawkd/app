@@ -55,7 +55,8 @@ public class MainActivity extends AppCompatActivity
         adapter = new cardAdapter();
 
         adapter.addCard(new cardItem(R.mipmap.jihun, "프로그래머가 되고싶어?", false, "안녕 얘들아? 난 프로그래밍 회사에서 노예로 일하고 있는 강지훈이야   ...자세하게"));
-        adapter.addCard(new cardItem(R.mipmap.byeongcheol,"서버를 건드려 볼까??",true,"서버를 만지고 싶니? 내 글을 봐!   ...자세하게"));
+
+        adapter.addCard(new cardItem(R.mipmap.byeongcheol,"서버를 건드려 볼까??", false ,"서버를 만지고 싶니? 내 글을 봐!   ...자세하게"));
         adapter.addCard(new cardItem(R.mipmap.minwoo,"보안? 나한테 맡겨!",false,"보안? 그거 그냥 랜선뽑아 데헷   ...자세하게"));
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
