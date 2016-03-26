@@ -14,13 +14,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity
+/**
+ * Created by whdgm on 3/27/2016.
+ */
+public class QnaActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_qna);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -85,10 +88,10 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(this, MainActivity.class));
             finish();
         } else if (id == R.id.nav_gallery) {
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, QnaActivity.class));
             finish();
         } else if (id == R.id.nav_info) {
-            startActivity(new Intent(this,InfoMain.class));
+            startActivity(new Intent(this, InfoMain.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
