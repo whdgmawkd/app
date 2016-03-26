@@ -60,7 +60,7 @@ public class QnaActivity extends AppCompatActivity
         recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
         adapter = new cardAdapter();
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-        adapter.addCard(new cardItem(R.mipmap.minwoo, "프로그래머를 진로로 하는데 어쩌죠", false, "중3때부터 프로그래머가 되고싶어온 1인입니다. 이제 고2가 되어 슬슬 대학걱정 ...자세하게"));
+        adapter.addCard(new cardItem(R.mipmap.minwoo, "프로그래머를 진로로 하는데 어쩌죠", false, "Q.중3때부터 프로그래머가 되고싶어온 1인입니다. 이제 고2가 되어 슬슬 대학걱정 ...자세하게"));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
