@@ -19,7 +19,7 @@
             android:orientation="vertical"
             card_view:cardCornerRadius="4dp"
             card_view:cardElevation="5dp"
-            android:onClick="schoolinfo">
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -53,14 +53,14 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="학교정보"
+                            android:text="로리보지"
                             android:textSize="25dp"
                             android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="우리 학교 정보를 확인합니다"
+                            android:text="섹스 따먹고싶다."
                             android:textSize="20dp" />
 
                     </LinearLayout>
