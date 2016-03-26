@@ -16,52 +16,37 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 
 import nlnl.app.card.cardAdapter;
 import nlnl.app.card.cardItem;
 
-public class WebActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class WebActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
-    private cardAdapter adapter;
+    private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Main");
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_web);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        webView = (WebView)findViewById(R.id.webView);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
+        // 웹뷰에서 자바스크립트실행가능
+        webView.getSettings().setJavaScriptEnabled(true);
+        // 구글홈페이지 지정
+        webView.loadUrl("http://www.career.go.kr/cnet/web/main/main.mdo");
+        // WebViewClient 지정
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+
+
 
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
             super.onBackPressed();
-        }
+
     }
 
     @Override
@@ -86,26 +71,5 @@ public class WebActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
 
-        if (id == R.id.nav_main) {
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
-        } else if (id == R.id.nav_qna) {
-            startActivity(new Intent(this, QnaActivity.class));
-            finish();
-        } else if (id == R.id.nav_web) {
-            startActivity(new Intent(this, WebActivity.class));
-        } else if (id == R.id.nav_info) {
-            startActivity(new Intent(this, InfoMain.class));
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
 }
