@@ -52,7 +52,8 @@
                 android:layout_weight="0"
                 android:paddingLeft="4dp"
                 android:background="@drawable/checked"
-                android:textColor="#00ffffff"/>
+                android:textColor="#00ffffff"
+                android:visibility="gone"/>
 
         </LinearLayout>
 

@@ -10,6 +10,10 @@
             android:id="@+id/nav_qna"
             android:icon="@drawable/ic_menu_gallery"
             android:title="QnA" />
+        <item
+            android:id="@+id/nav_web"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Career Net" />
     </group>
 
     <group>

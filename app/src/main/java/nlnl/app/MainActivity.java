@@ -109,6 +109,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_qna) {
             startActivity(new Intent(this, QnaActivity.class));
             finish();
+        } else if(id == R.id.nav_web){
+            startActivity(new Intent(this,WebActivity.class));
         } else if (id == R.id.nav_info) {
             startActivity(new Intent(this,InfoMain.class));
         }

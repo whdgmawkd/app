@@ -18,11 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".QnaActivity"
+        <activity
+            android:name=".QnaActivity"
             android:label="QnA"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".InfoMain"
             android:label="Info"
@@ -31,6 +30,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="nlnl.app.MainActivity" />
         </activity>
+        <activity android:name=".WebActivity"></activity>
     </application>
 
 </manifest>
