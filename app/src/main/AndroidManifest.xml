@@ -33,6 +33,7 @@
                 android:value="nlnl.app.MainActivity" />
         </activity>
         <activity android:name=".WebActivity"></activity>
+        <activity android:name=".ChatTest"></activity>
     </application>
 
 </manifest>

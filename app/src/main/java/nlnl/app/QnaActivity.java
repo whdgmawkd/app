@@ -102,7 +102,7 @@ public class QnaActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+        // Handle navigation view item clicks here.안녕 얘들아 난 프로그래밍 회사에서 노예로 일하고 있는 강지훈이야
         int id = item.getItemId();
 
         if (id == R.id.nav_main) {
@@ -115,6 +115,8 @@ public class QnaActivity extends AppCompatActivity
             startActivity(new Intent(this, WebActivity.class));
         } else if (id == R.id.nav_info) {
             startActivity(new Intent(this,InfoMain.class));
+        } else if(id == R.id.nav_chat){
+            startActivity(new Intent(this,ChatTest.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

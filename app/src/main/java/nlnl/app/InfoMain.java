@@ -22,11 +22,11 @@ public class InfoMain extends AppCompatActivity {
             R.mipmap.jungheun
     };
     String[] Desc = {
-            "테스트",
-            "테스트",
-            "테스트",
-            "테스트",
-            "테스트"
+            "기획자 영등포공고,3학년",
+            "팀장, 기획자 시흥고, 2학년",
+            "개발자 호곡중, 3학년",
+            "개발자 용인정보고, 2학년",
+            "디자이너 시흥능곡고 2학년"
     };
 
     @Override
