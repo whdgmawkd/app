@@ -1,14 +1,17 @@
 package nlnl.app;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 import android.app.Activity;
 
-public class InfoMain extends Activity {
-    ListView list;
+public class InfoMain extends AppCompatActivity {
+    private ListView list;
+
     String[] web = {
             "조병철",
             "강지훈",
@@ -27,21 +30,16 @@ public class InfoMain extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_info);
 
         CustomList adapter = new
                 CustomList(InfoMain.this, web, imageId);
-        list = (ListView) findViewById(R.id.list);
+        list = (ListView) findViewById(R.id.listView);
+        if(list == null){
+            Log.d("list","null");
+            return;
+        }
         list.setAdapter(adapter);
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                Toast.makeText(InfoMain.this, "You Clicked at " + web[+position], Toast.LENGTH_SHORT).show();
-
-            }
-        });
 
     }
 }
