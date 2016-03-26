@@ -20,12 +20,37 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="진로강의 제목"
-            android:id="@+id/title" />
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/cardprofile"
+                android:layout_gravity="center"
+                android:layout_weight="0" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="진로강의 제목"
+                android:id="@+id/title"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/cardchecked"
+                android:layout_gravity="center"
+                android:layout_weight="0" />
+
+        </LinearLayout>
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

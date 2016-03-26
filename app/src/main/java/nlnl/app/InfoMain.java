@@ -22,6 +22,13 @@ public class InfoMain extends AppCompatActivity {
             R.mipmap.jongheum,
             R.mipmap.jungheun
     };
+    String[] Desc = {
+            "테스트",
+            "테스트",
+            "테스트",
+            "테스트",
+            "테스트"
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +36,8 @@ public class InfoMain extends AppCompatActivity {
         setContentView(R.layout.activity_info);
 
         CustomList adapter = new
-                CustomList(InfoMain.this, web, imageId);
+                CustomList(InfoMain.this, web, Desc, imageId);
         list = (ListView) findViewById(R.id.listView);
-        if(list == null){
-            Log.d("list","null");
-            return;
-        }
         list.setAdapter(adapter);
 
     }
