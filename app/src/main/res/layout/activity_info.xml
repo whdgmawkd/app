@@ -3,27 +3,25 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:id="@+id/imageView2"
-            android:src="@mipmap/logofix"/>
+            android:src="@mipmap/logofix"
+            android:layout_gravity="center_horizontal" />
 
-        <ListView
-                android:id="@+id/listView"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:divider="#cecece"
-                android:dividerHeight="1px">
-            </ListView>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    </LinearLayout>
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:divider="#cecece"
+                    android:dividerHeight="1px">
+                </ListView>
 
-
+        </LinearLayout>
 </LinearLayout>
