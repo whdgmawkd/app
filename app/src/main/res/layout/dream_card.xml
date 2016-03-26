@@ -24,12 +24,14 @@
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:paddingBottom="4dp">
 
             <ImageView
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:id="@+id/cardprofile"
+                android:paddingRight="4dp"
+                android:id="@+id/card_profile"
                 android:layout_gravity="center"
                 android:layout_weight="0" />
 
@@ -38,16 +40,19 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="진로강의 제목"
-                android:id="@+id/title"
+                android:id="@+id/card_title"
                 android:layout_gravity="center"
                 android:layout_weight="1" />
 
-            <ImageView
+            <ToggleButton
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:id="@+id/cardchecked"
+                android:id="@+id/card_checked"
                 android:layout_gravity="center"
-                android:layout_weight="0" />
+                android:layout_weight="0"
+                android:paddingLeft="4dp"
+                android:background="@drawable/checked"
+                android:textColor="#00ffffff"/>
 
         </LinearLayout>
 
@@ -56,7 +61,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="진로강의 간단한설명"
-            android:id="@+id/desc" />
+            android:id="@+id/card_desc" />
 
     </LinearLayout>
 
